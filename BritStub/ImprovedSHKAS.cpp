@@ -23,8 +23,8 @@ int main()
 		srand(time(NULL));
 
 		int TerPos = rand() % 64 + 1, GridHigh = 64, GridLow = 1, LocPre = false, PrePlaAmount = 0, PreLinAmount = 0, PreRanAmount = 0, PreBinAmount = 0, PlayerGrid[8][8], LineGrid[8][8], RanGrid[8][8];
-
 		string RetryInput;
+
 
 
 		// The Player While loop.
@@ -343,12 +343,11 @@ int main()
 			cout << "Preferred Skynet Search System : Binary Prediction System" << endl;
 		}
 
-
-		cout << endl << "Would you like to try again?" << endl << "Y/N" << endl;
-
-		while ((RetryInput != "Y" || RetryInput != "y") || (RetryInput != "N" || RetryInput != "n"))
+		while (!(RetryInput == "Y") && !(RetryInput == "y") && !(RetryInput == "N") && !(RetryInput == "n"))
 		{
+			cout << endl << "Would you like to try again?" << endl << "Y/N" << endl;
 			cin >> RetryInput;
+			cout << RetryInput << endl;
 		}
 
 		if (RetryInput == "Y" || RetryInput == "y")
@@ -360,7 +359,6 @@ int main()
 			cout << "Goodbye!" << endl;
 			SkynetTime = true;
 		}
-
 
 	}
 
